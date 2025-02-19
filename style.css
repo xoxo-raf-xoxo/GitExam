@@ -1,65 +1,204 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/*Navigation Bar*/
-.navbar{
+
+/* Navigation Bar */
+.navbar {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0,0,0,5);
+    background-color: rgba(0, 0, 0, 0.5); /* Adjusted opacity */
     position: sticky;
-    top:0;
+    top: 0;
 }
-.navbar ul{
+
+.navbar ul {
     display: flex;
     list-style: none;
     margin: 20px 0px;
 }
-.navbar ul li{
+
+.navbar ul li {
     font-family: century;
     font-size: 1.1rem;
     font-weight: bold;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: white;
     padding: 8px 25px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
-.navbar ul li a:hover{
+
+.navbar ul li a:hover {
     background-color: white;
     color: black;
-    box-shadow:0 0 10px white;
+    box-shadow: 0 0 10px white;
 }
-/*Home*/
-#home{
 
+/* Home */
+#home {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Slight opacity */
     align-items: center;
     height: 840px;
     color: white;
+    position: relative;
 }
-#home::before{
+
+#home::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 900%;
+    height: 100%; /* Corrected from 900% to 100% */
     background-image: url('311904370_1231855470702180_3705257420117702881_n.jpg');
-    opacity: .8;
+    opacity: 0.8;
     z-index: -1;
 }
-.main{
-   display: flex;
-   flex-direction: column; 
-   align-items:center;
-   position: absolute;
-   top:30%;
 
-}   
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%; /* Centered vertically */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%); /* Perfect centering */
+}
+
+.headings {
+    font-size: 3rem;
+    font-family: century;
+    margin: 40px 0px;
+    text-align: center;
+}
+
+/* About Me */
+#about {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+#pic {
+    display: flex;
+}
+
+#pic img {
+    width: 575px;
+    height: 400px;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 10px;
+}
+
+#intro h2 {
+    font-size: 10rem;
+    margin: 20px;
+}
+
+/* Curriculum Vitae Section */
+#cv {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    margin-bottom: 50px;
+}
+
+.cv-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.cv-item {
+    margin-bottom: 30px;
+}
+
+.cv-item h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.cv-item ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.cv-item ul li {
+    font-size: 1.1rem;
+    margin: 5px 0;
+}
+
+.cv-item ul li strong {
+    font-weight: bold;
+}
+
+.cv-item ul li em {
+    font-style: italic;
+}
+
+
+/* Contact */
+#contact {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.input {
+    padding: 12px;
+    margin: 15px;
+    width: 30%;
+    border: none;
+    outline: none;
+}
+
+.msg {
+    padding: 12px;
+    margin: 10px;
+    width: 30%; /* Adjusted width to 30% for consistency */
+    border: none;
+    outline: none;
+}
+
+#send {
+    padding: 12px 25px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: 0.3s ease;
+}
+
+#send:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+    background-color: white;
+    color: black;
+}
+
